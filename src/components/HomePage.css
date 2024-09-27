@@ -1,0 +1,175 @@
+/* HomePage.css */
+
+.homepage {
+    font-family: 'Arial', sans-serif;
+    background-color: #181818; /* Dark mode background */
+    color: #e0e0e0; /* Light text color for contrast */
+    padding: 20px;
+    text-align: center;
+    transition: background 0.3s, color 0.3s; /* Smooth transition */
+  }
+  
+  .homepage-header {
+    margin: 50px 0;
+    color: #4A90E2;
+    transition: transform 0.3s, color 0.3s;
+  }
+  
+  .homepage-header h1 {
+    font-size: 36px;
+    animation: fadeIn 1s ease-in-out; /* Animation for header */
+  }
+  
+  .typing-text {
+    font-size: 18px;
+    background: linear-gradient(90deg, #f39c12, #f1c40f); /* Gradient background */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Use for gradient text color */
+  }
+  
+  .homepage-header p {
+    margin-top: 20px; /* Add space above the paragraph */
+  }
+  
+  /* Center Trophy Emoji */
+  .trophy-container {
+    margin: 20px 0;
+    font-size: 100px; /* Size of the emoji */
+    animation: bounce 1s infinite; /* Bouncing animation */
+  }
+  
+  /* Contests Section */
+  .contests {
+    margin: 40px 0;
+  }
+  
+  .contests h2 {
+    font-size: 28px;
+    color: #8E44AD;
+    margin-bottom: 20px; /* Added margin below the heading */
+  }
+  
+  .contest-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .contest-card {
+    background: linear-gradient(90deg, black, #cdcdc73e); /* Dark card background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 250px;
+    text-align: left; /* Align text to the left */
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards; /* Animation for contest cards */
+  }
+  
+  .contest-card h3 {
+    font-size: 20px; /* Adjust title size */
+    margin-bottom: 10px; /* Space below the title */
+  }
+  
+  .contest-card p {
+    margin-bottom: 15px; /* Space below the description */
+  }
+  
+  .contest-button {
+    padding: 10px 15px;
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%; /* Full width button */
+  }
+  
+  .contest-button:hover {
+    background-color: #357ABD; /* Darker shade on hover */
+  }
+  
+  /* Features Section */
+  .features {
+    margin: 40px 0; /* Increased margin for spacing */
+  }
+  
+  .features h2 {
+    font-size: 28px;
+    color: #8E44AD;
+    margin-bottom: 20px; /* Added margin below the heading */
+  }
+  
+  .feature-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .feature-card {
+    background: linear-gradient(90deg, black, #f2eeee00); /* Dark card background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards; /* Animation for feature cards */
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-15px);
+    }
+    60% {
+      transform: translateY(-7px);
+    }
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .contest-cards,
+    .feature-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .contest-card,
+    .feature-card {
+      width: 90%; /* Full width on smaller screens */
+    }
+  }
+  
